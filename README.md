@@ -1,4 +1,4 @@
-# Subscriber Database Setup and Docker Commands
+#   VoltDB
 
 This repository contains SQL scripts to create and populate a `SUBSCRIBER` table, a stored procedure to select all subscribers, and Docker commands to manage your database container.
 
@@ -34,8 +34,10 @@ VALUES (5, 'Charles', 'Davison', '3344556677', 205, '2024-07-28 12:30:00');
 ```
 Stored Procedure
 Create a stored procedure to select all subscribers:
+```
 CREATE PROCEDURE selectAllSubscribers AS 
 SELECT * FROM SUBSCRIBER;
+```
 
 Docker Commands
 To list running Docker containers and find out the port on which your database container is running, use the following command
