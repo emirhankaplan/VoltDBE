@@ -1,6 +1,6 @@
 #   VoltDB
 
-This repository contains SQL scripts to create and populate a `SUBSCRIBER` table, a stored procedure to select all subscribers, and Docker commands to manage your database container.
+This repository provides a guide to download and install VoltDB, create and populate a SUBSCRIBER table, create a stored procedure for selecting records from the SUBSCRIBER table, and develop a Java application to interact with VoltDB.
 
 ## Table Creation and Data Insertion
 
@@ -32,21 +32,24 @@ INSERT INTO SUBSCRIBER (SUBSC_ID, SUBSC_NAME, SUBSC_SURNAME, MSISDN, TARIFF_ID, 
 VALUES (5, 'Charles', 'Davison', '3344556677', 205, '2024-07-28 12:30:00');
 
 ```
-Stored Procedure
-Create a stored procedure to select all subscribers:
+Create a VoltDB Procedure for Selecting SUBSCRIBER Table Records
+Create a stored procedure in VoltDB to select records from the SUBSCRIBER table:
 ```
 CREATE PROCEDURE selectAllSubscribers AS 
 SELECT * FROM SUBSCRIBER;
 ```
 
 Docker Commands
-To list running Docker containers and find out the port on which your database container is running, use the following command
+To list running Docker containers and find out the port on which your VoltDB container is running, use the following command:
+```
 docker ps
+```
 This command will display a list of all running Docker containers along with their ports.
 
 Usage
+Download and install VoltDB.
 Run the SQL scripts to create the SUBSCRIBER table and insert data.
 Create the stored procedure using the provided SQL command.
-Use the docker ps command to find your database container and its port.
-Connect to your database and run the selectAllSubscribers procedure to retrieve all subscriber data.
+Use the docker ps command to find your VoltDB container and its port.
+Create and run the Java application to interact with VoltDB and print the SUBSCRIBER table records.
 Feel free to customize the SQL scripts and Docker commands as per your requirements.
